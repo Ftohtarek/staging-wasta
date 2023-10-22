@@ -50,7 +50,7 @@ jobs:
           git add .
           git commit -m "Update demo"
           git remote
-          # git push origin staging
+          git push --set-upstream  origin staging
 
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
