@@ -29,7 +29,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          repository: ftohtarek/staging-wasta
+          repository: ftohtarek/demo-wasta
           publish_dir: dist/wasta
-          branch: staging
+          branch: gh-pages
           force_orphan: true
