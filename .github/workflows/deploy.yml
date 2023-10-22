@@ -38,4 +38,4 @@ jobs:
           cp -r ../dist/wasta/* .
           git add .
           git commit -m "Deployed from wast repository"
-          git push --force https://$TOKEN@github.com/Ftohtarek/staging-wasta.git staging
+          git push --force https://${{secrets.TOKEN}}@github.com/Ftohtarek/staging-wasta.git staging
