@@ -31,5 +31,5 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           repository: ftohtarek/demo-wasta
           publish_dir: dist/wasta
-          branch: gh-pages
+          branch: staging
           force_orphan: true
