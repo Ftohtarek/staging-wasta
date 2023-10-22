@@ -43,8 +43,8 @@ jobs:
           git push origin staging
 
           # Configure Git user details (you might need to set up a user and email)
-          # git config user.name "Ftohtarek"
-          # git config user.email "ftohtarek48@gmail.com"
+          # git config --global user.name "Ftohtarek"
+          # git config --global user.email "ftohtarek48@gmail.com"
 
           # Add, commit, and push the changes to the staging branch
           # git add .
