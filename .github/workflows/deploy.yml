@@ -49,7 +49,7 @@ jobs:
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
-          git push origin staging
+          # git push origin staging
 
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
