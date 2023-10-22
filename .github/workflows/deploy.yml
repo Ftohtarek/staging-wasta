@@ -27,23 +27,15 @@ jobs:
 
       - name: Deploy to staging-wasta repository
         run: |
-          # Clone the staging-wasta repository to a temporary directory
-          git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
-          # Copy the built files to the temporary repository
-          cp -r dist/wasta/* temp-repo/
-
-          # Navigate to the temporary repository
-          cd temp-repo
-
-          # Configure Git user details (you might need to set up a user and email)
-          git config --global user.name "Ftohtarek"
           git config --global user.email "ftohtarek48@gmail.com"
-          Username for 'https://github.com': Ftohtarek
+          git config --global user.name "Ftohtarek"
+          git clone https://github.com/Ftohtarek/staging-wasta.git
 
-          # Add, commit, and push the changes to the staging branch
+          cd staging-wasta
+          git checkout -b staging
+          pwd
+          ls ../
+          cp -r ../dist/wasta/* .
           git add .
-          git commit -m "Update demo"
-          git push origin staging
-          
-        env:
-          githup_token: ${{secrets.TOKEN}}
+          git commit -m "Deployed from wast repository"
+          git push --force https://$TOKEN@github.com/Ftohtarek/staging-wasta.git staging
