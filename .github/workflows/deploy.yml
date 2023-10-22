@@ -43,6 +43,7 @@ jobs:
           git add .
           git commit -m "Update demo"
           git push origin staging
+
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
