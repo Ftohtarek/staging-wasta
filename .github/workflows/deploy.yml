@@ -36,13 +36,6 @@ jobs:
 
           # Navigate to the temporary repository
           cd temp-repo
-          pwd
-          ls
-
-          # git add .
-          # git commit -m "update demo"
-          # git pull origin staging
-          # git push origin staging
 
           # Configure Git user details (you might need to set up a user and email)
           git config --global user.name "Ftohtarek"
