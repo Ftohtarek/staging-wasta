@@ -37,8 +37,8 @@ jobs:
           cd temp-repo
 
           # Configure Git user details (you might need to set up a user and email)
-          git config user.name "Your Name"
-          git config user.email "youremail@example.com"
+          git config user.name "Ftohtarek"
+          git config user.email "ftohtarek48@gmail.com"
 
           # Add, commit, and push the changes to the staging branch
           git add .
