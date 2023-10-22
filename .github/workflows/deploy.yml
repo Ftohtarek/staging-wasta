@@ -45,12 +45,13 @@ jobs:
           # Configure Git user details (you might need to set up a user and email)
           git config --global user.name "Ftohtarek"
           git config --global user.email "ftohtarek48@gmail.com"
+          Username for 'https://github.com': Ftohtarek
 
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
           git remote
-          git push origin test
+          git push origin staging
 
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
