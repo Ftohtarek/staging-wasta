@@ -26,14 +26,13 @@ jobs:
         run: npm run build
 
       - name: Deploy to staging-wasta repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           # Clone the staging-wasta repository to a temporary directory
-          mkdir temp-repo
-          cd temp-repo
-          git remote add origin https://github.com/Ftohtarek/staging-wasta.git
-          # git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
+          git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
           # Copy the built files to the temporary repository
-          cp -r ../dist/wasta/* temp-repo/
+          cp -r dist/wasta/* temp-repo/
 
           # Navigate to the temporary repository
           cd temp-repo
@@ -53,11 +52,9 @@ jobs:
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
-          git remote
           git push origin staging
 
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
 
 
 
