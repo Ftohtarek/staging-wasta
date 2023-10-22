@@ -26,8 +26,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to staging-wasta repository
-        env:
-          githup_token: ${{secrets.TOKEN}}
         run: |
           # Clone the staging-wasta repository to a temporary directory
           git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
@@ -46,3 +44,5 @@ jobs:
           git add .
           git commit -m "Update demo"
           git push origin staging
+        env:
+          githup_token: ${{secrets.TOKEN}}
