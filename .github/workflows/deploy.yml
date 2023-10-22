@@ -40,6 +40,7 @@ jobs:
           git config user.name "Your Name"
           git config user.email "youremail@example.com"
 
+  
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
