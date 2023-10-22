@@ -26,10 +26,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to my-private-repo repository
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          repository: ftohtarek/demo-wasta
-          publish_dir: dist/wasta
-          branch: staging
-          force_orphan: true
+        run: |
+            cp -r dist/wasta https://github.com/Ftohtarek/staging-wasta.git
+            git push https://github.com/Ftohtarek/staging-wasta.git staging
