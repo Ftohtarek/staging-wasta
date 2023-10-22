@@ -49,6 +49,7 @@ jobs:
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
+          git remote
           # git push origin staging
 
         env:
