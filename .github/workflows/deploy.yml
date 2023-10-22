@@ -30,7 +30,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           # Clone the staging-wasta repository to a temporary directory
-          git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
+          git clone https://user:${{ secrets.TOKEN }}@github.com/Ftohtarek/staging-wasta
+          # git clone https://github.com/Ftohtarek/staging-wasta.git temp-repo
           # Copy the built files to the temporary repository
           cp -r dist/wasta/* temp-repo/
 
