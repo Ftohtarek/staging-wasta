@@ -36,17 +36,16 @@ jobs:
           # Navigate to the temporary repository
           cd temp-repo
 
-          # Set up Git user details (you might need to configure a username and email)
+          # Configure Git user details (you might need to set up a user and email)
           git config user.name "Your Name"
           git config user.email "youremail@example.com"
 
-  
           # Add, commit, and push the changes to the staging branch
           git add .
           git commit -m "Update demo"
           git push origin staging
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
 
