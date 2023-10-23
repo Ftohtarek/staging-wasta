@@ -24,7 +24,7 @@ export class LangService {
 
   private replaceLang(lang: string) {
     const languagePattern = /\/([a-z]{1,})\//;
-    const match = location.pathname.match(languagePattern);
+    const match = location.href.match(languagePattern);
 
     return match ? location.href.replace(match[0], `/${lang}/`) : location.href
 
