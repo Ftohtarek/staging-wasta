@@ -1,0 +1,50 @@
+@use 'src/themes/variables' as var;
+
+:host {
+  --alpha: 0.5;
+  --bg-color: var(--primary);
+  // --shadow
+  --color: var(--btn-primary-color);
+}
+
+.wasta-btn {
+  background-color: transparent;
+  border: none;
+  transition: all .3s;
+}
+
+button {
+  border-radius: .2em;
+  background-color: var(--bg-color) !important;
+  color: var(--color);
+}
+
+.ripple-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(0);
+  animation: ripple .7s linear;
+}
+
+
+.interactive {
+  &:hover {
+    box-shadow: 0px 4px 4px -2px var(--bg-color);
+
+  }
+
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}

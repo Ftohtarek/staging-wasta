@@ -1,0 +1,19 @@
+$secondary: #ffffff;
+$primary: #d92b4c;
+$gradient-start: #AF29FF;
+$gradient-middle1: #E5C9F2;
+$gradient-middle2: #FEF3F1;
+$gradient-end: #F85D39;
+$bgGradient: linear-gradient(to right, $gradient-start, $gradient-middle1, $gradient-middle2, $gradient-end);
+
+:root {
+  --desktop-font: 20px;
+  --secondary: $secondary;
+  --primary: #d92b4c;
+  /* button color matcher */
+  --btn-primary-color: #ffffff
+}
+
+// :host {
+//   --desktop-font: 25px
+// }

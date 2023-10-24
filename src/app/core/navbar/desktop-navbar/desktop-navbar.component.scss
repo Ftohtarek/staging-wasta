@@ -1,0 +1,12 @@
+@use 'src/themes/themes' as themes;
+
+nav {
+  font-size: var(--desktop-font);
+  width: 100%;
+  padding: .2em;
+  background-color: themes.$secondary;
+}
+
+.test {
+  background-color: red !important;
+}
