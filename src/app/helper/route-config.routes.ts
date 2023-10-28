@@ -8,7 +8,12 @@ type TRouteConfig = {
 /** * Configuration object for route paths. */
 export let appRoutes: TRouteConfig = <TRouteConfig>{}
 export const routeConfig = {
-  home: 'home'
+  home: 'home',
+  hassan: "hassen",
+  cart: "cart",
+  checkout: "checkout",
+  order: "order",
+  test:'test'
 }
 
 /** * Service for managing application routes.*/

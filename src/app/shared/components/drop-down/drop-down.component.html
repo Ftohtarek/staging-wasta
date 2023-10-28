@@ -1,0 +1,8 @@
+<div dropdown #dropdown>
+  <ul [ngStyle]="customStyle" *ngIf="dropdownService.toggleState()">
+    <ng-content>
+
+    </ng-content>
+  </ul>
+
+</div>

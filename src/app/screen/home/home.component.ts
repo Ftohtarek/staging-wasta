@@ -11,7 +11,6 @@ import { LangService } from 'src/app/core/services/lang.service';
 })
 export class HomeComponent {
   constructor(public lang: LangService) {
-    console.log('hi');
 
   }
 }
