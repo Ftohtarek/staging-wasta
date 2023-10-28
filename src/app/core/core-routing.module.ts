@@ -10,7 +10,8 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', redirectTo: routeConfig.home, pathMatch: 'full' },
-      { path: routeConfig.home, component: HomeComponent }
+      { path: routeConfig.home, component: HomeComponent },
+      { path: routeConfig.cart, component: HomeComponent }
     ]
   },
 

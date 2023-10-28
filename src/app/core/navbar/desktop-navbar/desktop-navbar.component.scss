@@ -3,10 +3,32 @@
 nav {
   font-size: var(--desktop-font);
   width: 100%;
-  padding: .2em;
+  padding: .3em 0px;
   background-color: themes.$secondary;
 }
 
-.test {
-  background-color: red !important;
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.active {
+  ::ng-deep {
+    button {
+      --bg-color: var(--primary)
+    }
+  }
+}
+
+ng-dropDown li {
+  width: 200px;
+  margin: 5px !important;
+
+  &:hover {
+    color: rgb(var(--primary));
+    background-color: transparent !important;
+  }
 }

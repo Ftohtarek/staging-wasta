@@ -6,6 +6,7 @@ import { ComponentBuilderService } from 'src/app/shared/services/component-build
 import { Observable } from 'rxjs';
 import { DesktopNavbarComponent } from '../navbar/desktop-navbar/desktop-navbar.component';
 import { MobileNavbarComponent } from '../navbar/mobile-navbar/mobile-navbar.component';
+import { appRoutes } from 'src/app/helper/route-config.routes';
 
 @Component({
   selector: 'app-layout',
@@ -22,6 +23,9 @@ export class LayoutComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.buildNavbar();
+    console.log(appRoutes.checkout);
+    console.log(appRoutes.test);
+
   }
 
   buildNavbar() {

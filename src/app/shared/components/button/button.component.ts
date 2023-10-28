@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, HostBinding, Input, NgZone, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostBinding, Input, Output, Renderer2, ViewChild } from '@angular/core';
+type TThemes = 'solid' | 'flat' | 'outline' | 'icon'
+type TColor = 'primary' | 'accent' | 'offset' | 'danger' | 'success' | 'warning'
 @Component({
-  selector: 'wasta-button',
+  selector: 'ng-button',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './button.component.html',
@@ -10,13 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent implements AfterViewInit {
   @Input() customStyle: { [key: string]: string } = {};
-  @Input() themes: string = 'solid';
+
+  @Input() themes: TThemes = 'solid'
+
+  @Input() set size(value: number) {
+    this.el.nativeElement.style.fontSize = `${value}px`
+  }
 
   @Input() set color(value: string) {
-    console.log(this.el.nativeElement,value);
     this.el.nativeElement.style.setProperty('--bg-color', `var(--${value})`)
     this.el.nativeElement.style.setProperty('--color', `var(--btn-${value}-color)`)
-
   }
 
   constructor(private el: ElementRef<HTMLButtonElement>, private renderer: Renderer2) {
@@ -25,6 +29,7 @@ export class ButtonComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.el.nativeElement.firstElementChild?.classList.add('wasta-button')
+
   }
 
 

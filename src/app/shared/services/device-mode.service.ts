@@ -31,6 +31,7 @@ export class DeviceModeService {
       this.mode()
       this.layoutSwitcher(this.layoutConfig)
     })
+    
     this.obsrever.observe([this.mobileModeWidth, this.desktopModeWidth, this.tabletModeWidth]).subscribe(state => {
       // Get the state of the layout breakpoint
       let desktopModeState = state.breakpoints[this.desktopModeWidth] ? true : false

@@ -1,5 +1,8 @@
+$primary: rgb(217, 43, 76);
+$accent: rgb(0, 0, 255);
+$offset: rgb(127, 135, 158);
+
 $secondary: #ffffff;
-$primary: #d92b4c;
 $gradient-start: #AF29FF;
 $gradient-middle1: #E5C9F2;
 $gradient-middle2: #FEF3F1;
@@ -9,9 +12,18 @@ $bgGradient: linear-gradient(to right, $gradient-start, $gradient-middle1, $grad
 :root {
   --desktop-font: 20px;
   --secondary: $secondary;
-  --primary: #d92b4c;
   /* button color matcher */
-  --btn-primary-color: #ffffff
+  --primary: 217, 43, 76;
+  --btn-primary-color: #ffffff;
+  //
+  --accent: 0, 0, 255;
+  --btn-accent-color: #ffffff;
+  //
+  --offset: 127, 135, 158;
+  --btn-offset-color: #ffffff;
+  //
+  --dark: 0, 0, 0;
+  --btn-dark-color: 0, 0, 0
 }
 
 // :host {
