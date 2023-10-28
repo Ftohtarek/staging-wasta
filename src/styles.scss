@@ -1,6 +1,7 @@
 // wasta theming
 @use './themes/variables';
 
+
 /* You can add global styles to this file, and also import other style files */
 $gradient-start: #AF29FF;
 $gradient-middle1: #E5C9F2;
@@ -16,13 +17,18 @@ body {
 
 html,
 body {
-
+  height: 100%;
 }
 
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('./assets/fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+  font-style: normal; /* Specify the font style if applicable */
 
+}
 body {
   margin: 0;
   *{
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter-Light";
   }
 }
