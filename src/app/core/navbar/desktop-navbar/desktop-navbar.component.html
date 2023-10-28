@@ -10,11 +10,22 @@
           <ng-button [color]="'offset'" [size]="12" [themes]="'outline'">Find a jop</ng-button>
         </div>
       </div>
-      <!--  -->
       <div class="d-flex gap-2 align-items-center">
-        <ng-button [color]="'dark'" [size]="16" [themes]="'flat'" [customStyle]="{'padding':'10px 14px'}">Sign
-          in</ng-button>
-        <ng-button [color]="'primary'" [size]="12" [themes]="'solid'">Find a jop</ng-button>
+        <!-- sign in -->
+        <ng-container *ngIf="!authState.isLoggedIn()">
+          <ng-button [color]="'dark'" [size]="16" [themes]="'flat'" [customStyle]="{'padding':'10px 14px'}">Sign
+            in</ng-button>
+          <ng-button [color]="'primary'" [size]="12" [themes]="'solid'">Find a jop</ng-button>
+        </ng-container>
+        <!-- logged in -->
+        <ng-container *ngIf="authState.isLoggedIn()">
+          <ng-button [color]="'primary'" [size]="16" [themes]="'icon'">
+            <div class="d-flex align-items-center gap-2">
+              <img src="../../../../assets/images/icons/client.svg" alt="client" width="34" height="100%">
+              <span>{{authState.user?.name}}</span>
+            </div>
+          </ng-button>
+        </ng-container>
         <!-- lang -->
         <ng-button [color]="'dark'" [size]="14" [themes]="'icon'" class="mx-2">
           <div class="d-flex align-items-center gap-2">
@@ -34,6 +45,7 @@
           <li>about</li>
           <li>how to work</li>
         </ng-dropDown>
+
       </div>
 
     </div>
